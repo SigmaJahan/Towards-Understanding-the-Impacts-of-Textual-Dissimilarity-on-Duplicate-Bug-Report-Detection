@@ -1,13 +1,14 @@
-# Project Title: 
+# Towards Understanding the Impacts of Textual Dissimilarity on Duplicate Bug Report Detection
+
+# Project Description 
+**Abstract:** About 40% of software bug reports are duplicates of one another, which pose a major overhead during software maintenance. Traditional techniques often focus on detecting duplicate bug reports that are textually similar. However, in bug tracking systems, many duplicate bug reports might not be textually similar, for which the traditional techniques might fall short. In this paper, we conduct a large-scale empirical study to better understand the impacts of textual dissimilarity on the detection of duplicate bug reports. First, we collect a total of 92,854 bug reports from three open-source systems and construct two datasets containing textually similar and textually dissimilar duplicate bug reports. Then we determine the performance of three existing techniques in detecting duplicate bug reports and show that their performance is significantly poor for textually dissimilar duplicate reports. Second, we analyze the two groups of bug reports using a combination of descriptive analysis, word embedding visualization, and manual analysis. We found that textually dissimilar duplicate bug reports often miss important components (e.g., expected behaviors and steps to reproduce), which could lead to their textual differences and poor performance by the existing techniques. Finally, we apply domain-specific embedding to duplicate bug report detection problems, which shows mixed results. All these findings above warrant further investigation and more effective solutions for detecting textually dissimilar duplicate bug reports. 
+
+```
 Towards Understanding the Impacts of Textual Dissimilarity on Duplicate Bug Report Detection
+Sigma Jahan and Mohammad Masudur Rahman
+```
 
-# Project Description: 
-About 40% of software bug reports are duplicates of one another, which pose a major overhead during software maintenance. Traditional techniques often focus on detecting duplicate bug reports that are textually similar. However, in bug tracking systems, many duplicate bug reports might not be textually similar, for which the traditional techniques might fall short. In this paper, we conduct a large-scale empirical study to better understand the impacts of textual dissimilarity on the detection of duplicate bug reports. First, we collect a total of 92,854 bug reports from three open-source systems and construct two datasets containing textually similar and textually dissimilar duplicate bug reports. Then we determine the performance of three existing techniques in detecting duplicate bug reports and show that their performance is significantly poor for textually dissimilar duplicate reports. Second, we analyze the two groups of bug reports using a combination of descriptive analysis, word embedding visualization, and manual analysis. We found that textually dissimilar duplicate bug reports often miss important components (e.g., expected behaviors and steps to reproduce), which could lead to their textual differences and poor performance by the existing techniques. Finally, we apply domain-specific embedding to duplicate bug report detection problems, which shows mixed results. All these findings above warrant further investigation and more effective solutions for detecting textually dissimilar duplicate bug reports. 
-
-# Members : 
-Sigma Jahan, Mohammad Masudur Rahman
-
-1. Dataset preprocessing: 
+**1. Dataset preprocessing**
 Run the files from Dataset Pre-processing for Eclipse, Firefox, and Mobile. We have used N-Gram to select the Textually Similar and Dissimilar Duplicate bug reports (Unigram, Bigram and Trigram). There are two sets of datatset from each category: One for the IR-based approach (Dataset for BM25 & LDA+GloVe and another for the DL-based approach (Train_Test dataset). Raw datasets are available as Dataset(primary) in zip format as the size is too huge to upload in GitHub.
 Optional argument:
 
@@ -21,7 +22,7 @@ Optional argument:
                          Character vocabulary size (default: 100)
 
 
-2. Existing Model Implementation and Evaluation: 
+**2. Existing Model Implementation and Evaluation** 
 There are three main python files to run for each dataset. BM25, LDA+GloVE, and Siamese CNN as python files. All the files have been implemented using Google Colab with the following system requirements.
 Optional arguments:
 
@@ -53,13 +54,13 @@ Optional arguments:
 -   -lr, --learning_rate  Learning rate (default: 1e-3)
 
 
-3. Statistical Analysis:
+**3. Statistical Analysis**
  Run the file name as stat_analysis from Statistical Analysis folder with the following requirements (PyNonpar & Pingouin).
 
-4. TSNE (Embedding Visualization):
+**4. TSNE (Embedding Visualization)**
  For the dataset-specific embedding visualization from the folder named Embedding Visualization, run the embedding_visualization python file on Google Colab.
 
-5. Proposed Model Implementation and Evaluation: 
+**5. Proposed Model Implementation and Evaluation** 
 Run the domain_specific_embedding python file from the folder named as Domain-Specific Embedding Model for all three dataset. 
 
 # System Requirements
@@ -79,7 +80,7 @@ Run the domain_specific_embedding python file from the folder named as Domain-Sp
 - Make sure that GloVe is working on your platform. It is recommended to run the LDA+GloVE, Siamese CNN based model, and T-SNE visualization which include GloVe online on platforms such as Google Colab.
 
 
-# Installation details: 
+# Installation details 
 Install these packages using command prompt or using Google Colab: 
  
 - pip install PyNonpar
@@ -102,12 +103,22 @@ Required parameters for the operations:
 - Sim - Indicates textually similar duplicate bug reports
 - Dissim - Indicates textually dissimilar duplicate bug reports
 
+# Cite this work
+```
+@INPROCEEDINGS{saner2023sigma,
+	author={Jahan, S. and Rahman, M. M.},
+	booktitle={Proc. SANER},
+	title={Towards Understanding the Impacts of Textual Dissimilarity on Duplicate Bug Report Detection},
+	year={2023},
+	pages={12}
+}
+```
 
-# Licensing Information:
+# Licensing Information
 
 https://www.freecodecamp.org/news/how-open-source-licenses-work-and-how-to-add-them-to-your-projects-34310c3cf94/
 
 (Can get after creating the repo on Gitlab) - Use Apache License 2.0, MIT license, General Public License as you wish
 
-Something not working as expected?
-Contact: Sigma Jahan (sigma.jahan@dal.ca) 
+# Something not working as expected?
+**Contact:** Sigma Jahan (sigma.jahan@dal.ca) or [create an issue](https://github.com/SigmaJahan/Towards-Understanding-the-Impacts-of-Textual-Dissimilarity-on-Duplicate-Bug-Report-Detection/issues/new)
