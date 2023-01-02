@@ -8,7 +8,7 @@ About 40% of software bug reports are duplicates of one another, which pose a ma
 Sigma Jahan, Mohammad Masudur Rahman
 
 1. Dataset preprocessing: 
-Run the files from Dataset Pre-processing for Eclipse, Firefox, and Mobile. We have used N-Gram to select the Textually Similar and Dissimilar Duplicate bug reports (Unigram, Bigram and Trigram). There are two sets of datatset from each category: One for the IR-based approach (Dataset for BM25 & LDA+GloVe and another for the DL-based approach (Train_Test dataset). Raw datasets are available upon request as the size is too huge to upload in GitHub.
+Run the files from Dataset Pre-processing for Eclipse, Firefox, and Mobile. We have used N-Gram to select the Textually Similar and Dissimilar Duplicate bug reports (Unigram, Bigram and Trigram). There are two sets of datatset from each category: One for the IR-based approach (Dataset for BM25 & LDA+GloVe and another for the DL-based approach (Train_Test dataset). Raw datasets are available as Dataset(primary) in zip format as the size is too huge to upload in GitHub.
 Optional argument:
 
 -   -d, --data            DATA
