@@ -13,7 +13,8 @@ Run the files from Dataset Pre-processing for Eclipse, Firefox, and Mobile. We h
 Optional argument:
 
 -   -d, --data            DATA
-                        Path to data folder
+                         
+Path to data folder
 -   -r, --ratio           SPLIT_RATIO
                          Split ratio of training data (default: 0.8)
 -   -wv, --word_vocab     WORD_VOCAB_SIZE
